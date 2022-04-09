@@ -1,0 +1,42 @@
+import mongoose from "mongoose";
+const Schema = mongoose.Schema;
+
+let cocktailModel = new Schema({
+  name: String,
+  alcoholic: String,
+  glass: String,
+  instructions: String,
+  image: String,
+  ingredient1: String,
+  ingredient2: String,
+  ingredient3: String,
+  ingredient4: String,
+  ingredient5: String,
+  ingredient6: String,
+  ingredient7: String,
+  ingredient8: String,
+  ingredient9: String,
+  ingredient10: String,
+  ingredient11: String,
+  ingredient12: String,
+  ingredient13: String,
+  ingredient14: String,
+  ingredient15: String,
+  measurement1: String,
+  measurement2: String,
+  measurement3: String,
+  measurement4: String,
+  measurement5: String,
+  measurement6: String,
+  measurement7: String,
+  measurement8: String,
+  measurement9: String,
+  measurement10: String,
+  measurement11: String,
+  measurement12: String,
+  measurement13: String,
+  measurement14: String,
+  measurement15: String,
+})
+
+export default mongoose.model("Cocktail", cocktailModel);
