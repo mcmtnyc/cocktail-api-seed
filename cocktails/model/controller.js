@@ -13,7 +13,7 @@ export const getCocktails = async (req, res) => {
 export const getCocktail = async (req, res) => {
   try {
     const { id } = req.params;
-    const cocktails = await Cocktail.findById(id); /*.populate("")*/
+    const cocktails = await Cocktail.findById(id);
 
     if (Cocktail) {
       return res.json(cocktails);
@@ -31,6 +31,42 @@ export const createCocktail = async (req, res) => {
     const cocktail = new Cocktail(req.body);
     await cocktail.save();
     res.status(201).json(cocktail);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ error: error.message });
+  }
+};
+
+export const getCocktailByName = async (req, res) => {
+  try {
+    const Cocktail = await Cocktail.find();
+    let total = {
+      strDrink: [],
+    };
+    Cocktail.forEach((element) => {
+      console.log(element);
+      total.strDrink.push(element.strDrink);
+    });
+    res.json(total);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ error: error.message });
+  }
+  res.status(400).json({ message: "Cocktail not found!" });
+};
+
+export const getCocktailsByGlass = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const cocktail = await Cocktail.find({
+      strGlass: { $regex: id, $options: "i" },
+    }).exec();
+
+    if (cocktail) {
+      return res.json(cocktail);
+    }
+
+    res.status(400).json({ message: "Cocktail not found!" });
   } catch (error) {
     console.log(error);
     res.status(500).json({ error: error.message });
