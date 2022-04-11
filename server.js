@@ -1,7 +1,7 @@
-import db from "./db/connection.js";
-import routes from "./index.js";
+import db from "./connection.js";
+import router from "./index.js";
 
-import express from "express";
+import express from "express"
 
 const app = express();
 const PORT = process.env.PORT || 9000;
@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 9000;
 app.use(express.json());
 
 // Establish root
-app.use("/", routes);
+app.use("/", router);
 
 db.on("connected", () => {
   console.clear();

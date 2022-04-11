@@ -1,4 +1,9 @@
-{
+{  "type": "module",
+  "scripts": {
+    "start": "node connection.js",
+    "download": "node --experimental-fetch fetch.js > seedcocktails.json",
+    "seed": "node seed.js"
+  },
   "dependencies": {
     "express": "^4.17.3",
     "mongoose": "^6.2.10",
