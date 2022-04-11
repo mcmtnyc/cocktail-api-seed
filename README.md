@@ -1,8 +1,6 @@
-# Digimon Cyber Sleuth API
+# Project 5 - Cocktail API
 
-### **Heroku Link**: https://digimon-cyber-sleuth-api-nak.herokuapp.com/digi/
-
-A REST API built with Mongoose, MongoDB, Express, Javascript, HTML, CSS and RESTful routes that shows the digimon and thier traits from the video-game Digimon Story: Cyber Sleuth
+A REST API built with Mongoose, MongoDB, Express, Javascript, HTML, CSS and RESTful routes that
 
 ## Description
 
@@ -19,13 +17,13 @@ This project uses Schemas and Models to take and format JSON information that is
 ### Clone repository
 
 ```
-git clone https://github.com/NasimAkbor/Digimon-Cyber-Sleuth-API
+git clone https://github.com/mcmtnyc/Project-5-Cocktail-API.git
 ```
 
 ### Install Dependencies
 
 ```
-npm install
+npm install mongoose mongodb express
 ```
 
 ### Seed the data
