@@ -6,6 +6,10 @@ A REST API built with Mongoose, MongoDB, Express, Javascript, HTML, CSS and REST
 
 This project uses Schemas and Models to take and format JSON information that is then seeded into a database. That database is then used to build an API that can be accessed through multiple link routes.
 
+## Heroku Link
+
+https://git.heroku.com/mel-t-cocktail-api.git
+
 ## Instructions for local database manipulation:
 
 1. Clone down this repo.
