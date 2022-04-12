@@ -9,6 +9,7 @@ This project uses Schemas and Models to take and format JSON information that is
 ## Heroku Link
 
 https://git.heroku.com/mel-t-cocktail-api.git
+https://mel-t-cocktail-api.herokuapp.com/
 
 ## Instructions for local database manipulation:
 
