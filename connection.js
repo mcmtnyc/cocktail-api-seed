@@ -2,10 +2,9 @@ import mongoose from "mongoose";
 const DATABASE_NAME = "cocktailAPI";
 
 let mongooseConfig = { useNewUrlParser: true, useUnifiedTopology: true };
-let connectionString = process.env.MONGODB_URI;
 
 const MONGODB_URI =
-  connectionString || `mongodb://127.0.0.1:27017/${DATABASE_NAME}`;
+  process.env.PROD_MONGODB || `mongodb://127.0.0.1:27017/${DATABASE_NAME}`;
 
 // Uncomment to debug Mongoose queries
 mongoose.set("debug", true);
